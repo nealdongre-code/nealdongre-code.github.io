@@ -24,6 +24,17 @@ window.PORTFOLIO = {
       tags: ["Legal tech", "Workflow", "Web app"],
       visible: true,
       featured: true
+    },
+    {
+      title: "SEC Material Contracts Trends Dashboard",
+      category: "SEC disclosures / Contract research",
+      description:
+        "An interactive research dashboard exploring 114 Exhibit 10 attachments from 19 issuers across 2021, 2023, and 2025. Filter the sample by industry, year, filing type, and contract category, with AI-assisted classifications and links to original SEC filings. Educational and research use only; classifications are provisional.",
+      repo: "https://github.com/nealdongre-code/sec-disclosure-trend-analyzer",
+      demo: "https://nealdongre-code.github.io/sec-disclosure-trend-analyzer/",
+      tags: ["Legal tech", "AI-assisted research", "Data visualization"],
+      visible: true,
+      featured: false
     }
     // ADD ANOTHER PROJECT (remove the // marks and separate entries with a comma):
     // ,{
