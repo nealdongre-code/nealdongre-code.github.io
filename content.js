@@ -36,6 +36,17 @@ window.PORTFOLIO = {
       visible: true,
       featured: false
     }
+    ,{
+      title: "Music Credits Dashboard",
+      category: "Music metadata / Data visualization",
+      description:
+        "Explore how often a credited recording artist also appears in the songwriting credits. Compare release periods from 1960 to 2025 using a full MusicBrainz snapshot, and inspect examples from the recording evidence sample.",
+      repo: "https://github.com/nealdongre-code/nealdongre-code.github.io/tree/main/music-data-analysis",
+      demo: "https://nealdongre-code.github.io/music-data-analysis/",
+      tags: ["MusicBrainz", "Data visualization", "Research"],
+      visible: true,
+      featured: false
+    }
     // ADD ANOTHER PROJECT (remove the // marks and separate entries with a comma):
     // ,{
     //   title: "Another Project",
