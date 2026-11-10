@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore MusicBrainz songwriting and performance evidence from 1960 to 2025.">
+<title>Music Credits · Dashboard A</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="data.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<header><div class="wrap mast"><a href="#" class="brand"><span class="mark" aria-hidden="true">◉</span> MUSIC DATA ANALYSIS</a><span class="edition">DASHBOARD A / RESEARCH PREVIEW</span></div></header>
+<main class="wrap">
+<section class="intro"><div><p class="eyebrow">MUSICBRAINZ · 1960–2025</p><h1>Who wrote<br><em>the music?</em></h1><p>See how often the credited recording artist also appears in the songwriting credits, by release decade.</p></div><div class="record" aria-hidden="true"><span>DA<br><small>VOL. 01</small></span></div></section>
+<nav aria-label="Dashboard views"><button id="trendTab" aria-controls="trend" aria-pressed="true">01 &nbsp; Songwriter trends</button><button id="coverageTab" aria-controls="coverage" aria-pressed="false">02 &nbsp; Data coverage</button><button id="sampleTab" aria-controls="sample" aria-pressed="false">03 &nbsp; Recording explorer</button></nav>
+<section id="trend">
+<div class="section-head"><div><p id="trendCohort" class="eyebrow">ENGLISH-TAGGED MUSICBRAINZ AUDIT SAMPLE</p><h2>Did the recording artist also write it?</h2></div></div>
+<div class="panel">
+<div class="range-controls"><label><span id="startLabel">Start decade</span><select id="startDecade"></select></label><label><span id="endLabel">End decade</span><select id="endDecade"></select></label><button id="resetRange" type="button">Reset range</button></div>
+<p id="rangeSummary" role="status"></p>
+<div id="trendMetrics" class="metrics"></div>
+<ul class="legend" aria-label="Chart legend"><li class="writer-match">Artist appears as a writer</li><li class="writer-no-match">Artist does not appear as a writer</li><li class="writer-missing">Missing credit evidence</li></ul>
+<div id="trendChart"></div>
+</div>
+<details class="panel"><summary>Show counts and percentages</summary><div class="scroll"><table id="trendCounts"></table></div></details>
+<p class="note">Each bar uses English-tagged recordings in that decade within the selected range. The data coverage and recording explorer tabs use separate audit samples. A match requires at least one exact artist ID shared by the displayed recording credit and a songwriting credit on a qualifying work. Band membership and explicit performance credits are separate evidence. Years refer to earliest known release, and the final decade ends in 2025.</p>
+<details class="panel"><summary>How recordings qualify</summary><p>Recordings need a known release year in the selected range and at least one linked work tagged English through a recording-of relationship. Instrumental and karaoke relationships do not qualify. Missing work links or language tags can exclude English recordings. This measures MusicBrainz credit evidence within the eligible catalog.</p></details>
+</section>
+<section id="coverage" hidden><div class="section-head"><div><p class="eyebrow">CATALOG AUDIT · 1-IN-64 SAMPLE</p><h2>Coverage by release decade</h2></div><label>Decade<select id="coverageDecade"></select></label></div><div id="metrics" class="metrics"></div>
+<div class="panel"><div class="section-head"><div><h3 id="chartTitle"></h3><p id="chartDescription"></p></div><label>Measure<select id="measure"></select></label></div><div id="chart"></div></div>
+<details class="panel"><summary>Show counts behind the chart</summary><div class="scroll"><table id="counts"></table></div></details>
+<p class="note">Release year is the earliest known appearance in the snapshot. English coverage depends on linked works and lyric-language tags. The 2020s cover 2020–2025.</p></section>
+<section id="sample" hidden><div class="section-head"><div><p class="eyebrow">240 ENGLISH-TAGGED RECORDINGS · REVIEW SAMPLE</p><h2>Recording explorer</h2><p>Search the review sample and inspect the evidence behind each match.</p></div></div>
+<div class="filters"><label>Search titles, works or artists<input id="query" type="search" placeholder="Try Genesis or Suspicious Minds"></label><label>Decade<select id="sampleDecade"></select></label><label>Evidence signal<select id="signal"><option value="">Any signal</option><option value="displayed">Writer in displayed credit</option><option value="explicit">Writer in performance credit</option><option value="supported">Band membership supported</option><option value="uncertain">Band membership uncertain</option><option value="outside">Band membership outside year</option></select></label></div>
+<p id="resultCount" class="eyebrow" role="status"></p><div class="explorer"><div id="recordings" class="panel listing" aria-label="Matching recordings"></div><article class="panel evidence" id="evidence" aria-label="Selected recording evidence"></article></div>
+<p class="note">The review sample has fixed decade quotas. Use Catalog coverage for estimates from the larger audit sample.</p></section>
+</main>
+<footer class="wrap"><span>MusicBrainz community data · CC0 · Snapshot 2026-11-04</span><a href="https://musicbrainz.org/doc/MusicBrainz_Database/Download">Source and license ↗</a></footer>
+</body></html>
